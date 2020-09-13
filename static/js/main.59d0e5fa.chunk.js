@@ -1,0 +1,2 @@
+(this.webpackJsonppokemon_react=this.webpackJsonppokemon_react||[]).push([[0],{3:function(e,n,t){e.exports=t(8)},8:function(e,n,t){"use strict";t.r(n);var o=t(0),r=t.n(o),a=t(2);var c=function(){return r.a.createElement("div",null,"Hello")};t.n(a).a.render(r.a.createElement(c,null),document.getElementById("root"))}},[[3,1,2]]]);
+//# sourceMappingURL=main.59d0e5fa.chunk.js.map
