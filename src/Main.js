@@ -1,16 +1,19 @@
-import React from 'react';
-import './Main.css'
+import React, { Component } from 'react';
+import styles from './Main.module.css';
 
-function Main() {
-    return (
-        <section>
-            <main>Pokemon</main>
-            <p>name</p>
-            <img>imge</img>
-            <p>height</p>
-            <p>weight</p>
-        </section>
-    );
+class Main extends Component {
+    render() {
+        return (
+            <section>
+                <main>
+                    <p className={styles.text}>pokemonName</p>
+                    {/* <img className={styles.img}></img> */}
+                    <p className={styles.text}>height</p>
+                    <p className={styles.text}>weight</p>
+                </main>
+            </section>
+        );
+    }
 }
 
 export default Main;
