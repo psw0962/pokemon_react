@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import styles from './Main.module.css';
+import './Main.css';
 
 class Header extends Component {
     render() {
         return (
             <section>
-                <h1 className={styles.text}>Pokemon Book</h1>
+                <h1 className={'text textColor'}>Pokemon Book</h1>
             </section>
         );
     }

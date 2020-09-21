@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import styles from './Main.module.css';
-import PokemonCard from './PokemonCard.js';
+import './Main.css';
+import Pokemons from './Pokemons.js';
 
 class Main extends Component {
     render() {
         return (
             <section>
                 <main>
-                    <section className={styles.center}>
-                        <PokemonCard />
+                    <section className={'center'}>
+                        <Pokemons />
                     </section>
                 </main>
             </section>

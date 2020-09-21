@@ -1,4 +1,4 @@
-import { Card, Avatar } from 'antd';
+import { Card } from 'antd';
 import React, { Component } from 'react';
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 
@@ -6,18 +6,18 @@ const { Meta } = Card;
 
 class PokemonCard extends Component {
     constructor(props) {
-        console.log(constructor);
         super(props)
         this.state = {
             name: '',
             height: 0,
-            weight: 0
+            weight: 0,
+            pokemon_front_img_url: ''
         }
     }
 
     componentDidMount() {
-        console.log('componentDidMount');
-        fetch('https://pokeapi.co/api/v2/pokemon/1')
+        const { id } = this.props
+        fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
             .then((reponse) => {
                 return reponse.json()
             })
@@ -26,26 +26,26 @@ class PokemonCard extends Component {
                     ...this.state,
                     name: json.name,
                     weight: json.weight,
-                    height: json.height
+                    height: json.height,
+                    pokemon_front_img_url: json.sprites.front_default
                 })
             })
     }
 
     render() {
-        console.log('render');
         return (<Card
             style={{ width: 300 }}
             cover={
                 <img
                     alt="example"
-                    src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                    src={this.state.pokemon_front_img_url}
                 />
             }
-            actions={[
-                <SettingOutlined key="setting" />,
-                <EditOutlined key="edit" />,
-                <EllipsisOutlined key="ellipsis" />,
-            ]}
+        // actions={[
+        //     <SettingOutlined key="setting" />,
+        //     <EditOutlined key="edit" />,
+        //     <EllipsisOutlined key="ellipsis" />,
+        // ]}
         >
             <Meta
                 title={'pokemon name'}

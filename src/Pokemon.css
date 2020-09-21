@@ -1,0 +1,13 @@
+.pokemons-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0;
+
+}
+
+.pokemon-wrapper {
+    padding: 10px;
+}
+
+/* flex box game */
