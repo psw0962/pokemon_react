@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import styles from './Main.module.css';
+import PokemonCard from './PokemonCard.js';
 
 class Main extends Component {
     render() {
         return (
             <section>
                 <main>
-                    <p className={styles.text}>pokemonName</p>
-                    {/* <img className={styles.img}></img> */}
-                    <p className={styles.text}>height</p>
-                    <p className={styles.text}>weight</p>
+                    <section className={styles.center}>
+                        <PokemonCard />
+                    </section>
                 </main>
             </section>
         );
