@@ -13,9 +13,15 @@
 }
 
 .HeaderTextSize {
-    text-size-adjust: 50px;
+    font-size: 65px;
 }
 
 .textColor {
-    color: blanchedalmond;
+    color: white;
+}
+
+.pokemons-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
 }

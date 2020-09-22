@@ -1,6 +1,5 @@
 import { Card } from 'antd';
 import React, { Component } from 'react';
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 
 const { Meta } = Card;
 
@@ -66,4 +65,4 @@ class PokemonCard extends Component {
     }
 }
 
-export default PokemonCard
+export default PokemonCard;

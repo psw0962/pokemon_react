@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Main.css';
 import Pokemons from './Pokemons.js';
+import SearchBox from './SearchBox.js';
 
 class Main extends Component {
     render() {
@@ -8,6 +9,7 @@ class Main extends Component {
             <section>
                 <main>
                     <section className={'center'}>
+                        <SearchBox />
                         <Pokemons />
                     </section>
                 </main>
