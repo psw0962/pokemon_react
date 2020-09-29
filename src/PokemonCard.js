@@ -7,7 +7,6 @@ class PokemonCard extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            name: '',
             height: 0,
             weight: 0,
             pokemon_front_img_url: ''
@@ -15,15 +14,14 @@ class PokemonCard extends Component {
     }
 
     componentDidMount() {
-        const { id } = this.props
-        fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+        const { name } = this.props
+        fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
             .then((reponse) => {
                 return reponse.json()
             })
             .then((json) => {
                 this.setState({
                     ...this.state,
-                    name: json.name,
                     weight: json.weight,
                     height: json.height,
                     pokemon_front_img_url: json.sprites.front_default
@@ -48,7 +46,7 @@ class PokemonCard extends Component {
         >
             <Meta
                 title={'pokemon name'}
-                description={this.state.name}
+                description={this.props.name}
             />
 
             <Meta

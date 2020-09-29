@@ -19,9 +19,3 @@
 .textColor {
     color: white;
 }
-
-.pokemons-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 70px;
-}
